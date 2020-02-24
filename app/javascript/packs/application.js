@@ -15,5 +15,7 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+//= require modal.js
+//= require style.js
 //= require jquery
 //= require bootstrap-sprockets
