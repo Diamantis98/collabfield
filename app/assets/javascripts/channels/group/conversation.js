@@ -12,7 +12,7 @@ function subToGroupConversationChannel(id) {
             connected: function() {},
             disconnected: function() {},
             received: function(data) {
-                // prepend link to the conversation
+                // prepend link to the conversation 
                 // to the top of conversations menu list
                 modifyConversationsMenuList(data['conversation_id']);
 
@@ -21,25 +21,25 @@ function subToGroupConversationChannel(id) {
                 var conversation_rendered = ConvRendered(data['conversation_id'], 'g');
                 var messages_visible = ConvMessagesVisiblity(conversation);
 
-                // if the message is not sent by the user,
+                // if the message is not sent by the user, 
                 // mark the conversation as unseen
                 MarkGroupConvAsUnseen(data['user_id'], data['conversation_id']);
 
                 // append the new message
-                appendGroupMessage(conversation_rendered,
-                                   messages_visible,
+                appendGroupMessage(conversation_rendered, 
+                                   messages_visible, 
                                    conversation,
                                    data['message']);
 
                 // if the conversation window is rendered
                 if (conversation_rendered) {
-                    // after the new message was appended
+                    // after the new message was appended 
                     // scroll to the bottom of the conversation window
                     var messages_list = conversation.find('.messages-list');
                     var height = messages_list[0].scrollHeight;
                     messages_list.scrollTop(height);
                 }
-
+                
             },
             send_message: function(message) {
                 return this.perform('send_message', {
@@ -89,7 +89,7 @@ function MarkGroupConvAsUnseen(message_user_id, conversation_id) {
         $('#menu-gc' + conversation_id).addClass('unseen-conv');
         calculateUnseenConversations();
     }
-
+                  
 }
 
 // prepend link to the conversation to the top of conversations menu list
@@ -104,8 +104,8 @@ function modifyConversationsMenuList(conversation_id) {
 }
 
 // append the new message to the list
-function appendGroupMessage(conversation_rendered,
-                            messages_visible,
+function appendGroupMessage(conversation_rendered, 
+                            messages_visible, 
                             group_conversation,
                             message) {
     if (conversation_rendered) {

@@ -5,10 +5,10 @@ function findConv(conversation_id, type) {
     if (messenger_conversation.length) {
         // conversation is opened in the messenger
         return messenger_conversation;
-    } else {
+    } else { 
         // conversation is opened in a popup window
-        var data_attr = "[data-" + type + "conversation-id='" +
-                         conversation_id +
+        var data_attr = "[data-" + type + "conversation-id='" + 
+                         conversation_id + 
                          "']";
         var conversation = $('body').find(data_attr);
         return conversation;
@@ -22,10 +22,10 @@ function ConvRendered(conversation_id, type) {
         // conversation is opened in the messenger
         // so it automatically means that is visible
         return true;
-    } else {
+    } else { 
         // conversation is opened in a popup window
-        var data_attr = "[data-" + type + "conversation-id='" +
-                         conversation_id +
+        var data_attr = "[data-" + type + "conversation-id='" + 
+                         conversation_id + 
                          "']";
         var conversation = $('body').find(data_attr);
         return conversation.is(':visible');

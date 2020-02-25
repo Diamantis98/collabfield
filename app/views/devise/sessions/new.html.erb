@@ -3,17 +3,17 @@
     <div class="col-sm-6 col-sm-offset-3">
       <h2 class="text-center">Log in</h2>
 
-        <%= bootstrap_form_for(resource,
-                               as: resource_name,
+        <%= bootstrap_form_for(resource, 
+                               as: resource_name, 
                                url: session_path(resource_name)) do |f| %>
 
-        <%= f.email_field :email,
-                          autofocus: true,
-                          class: 'form-control',
+        <%= f.email_field :email, 
+                          autofocus: true, 
+                          class: 'form-control', 
                           placeholder: 'email' %>
 
-        <%= f.password_field  :password,
-                              autocomplete: "off",
+        <%= f.password_field  :password, 
+                              autocomplete: "off", 
                               class: 'form-control',
                               placeholder: 'password' %>
 
@@ -26,5 +26,5 @@
 
       <% end %>
     </div>
-  </div>
+  </div> 
 </div>
