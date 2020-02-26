@@ -9,7 +9,7 @@
 
 def seed_users
   user_id = 0
-  10.times do 
+  10.times do
     User.create(
       name: "test#{user_id}",
       email: "test#{user_id}@test.com",
@@ -42,14 +42,15 @@ def seed_categories
 end
 
 def seed_posts
+  Faker::Config.locale = :en
   categories = Category.all
 
   categories.each do |category|
     5.times do
       Post.create(
-        title: Faker::Lorem.sentences[0], 
-        content: Faker::Lorem.sentences[0], 
-        user_id: rand(1..9), 
+        title: Faker::Lorem.sentences[0],
+        content: Faker::Lorem.sentences[0],
+        user_id: rand(1..9),
         category_id: category.id
       )
     end
