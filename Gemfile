@@ -14,7 +14,7 @@ gem 'devise', git: 'https://github.com/plataformatec/devise' #, ref: '88e9a85'# 
 
 gem 'pg', '>= 0.18'
 # Use Puma as the app server
-gem 'puma', '~> 3.12.2'
+gem 'puma', '~> 4.3.9'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '>= 3.3.6'
 gem 'bootstrap_form'
